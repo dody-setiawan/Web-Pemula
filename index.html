@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="editBook" hidden>
+        <div id="formToEdit">
+            <h3>Edit Book</h3>
+            <form id="formEdit">
+                <div class="formElement">
+                    <label for="title">Title:</label><br>
+                    <input type="text" name="title" id="inputTitleFromEdit" spellcheck="false" required autocomplete="off">
+                </div>
+                <div class="formElement">
+                    <label for="author">Author:</label><br>
+                    <input type="text" name="author" id="inputAuthorFromEdit" spellcheck="false" required autocomplete="off">
+                </div>
+                <div class="formElement">
+                    <label for="year">Year:</label><br>
+                    <input type="text" name="year" id="inputYearFromEdit" spellcheck="false" required autocomplete="off">
+                </div>
+                <div class="formElement">
+                    <input type="submit" value="EDIT" id="editButton">
+                </div>
+            </form>
+            <img class="close" src="img/close.svg" alt="close" id="closeOfEdit">
+        </div>
+    </div>
+    <nav>
+        <div id="logo">
+            <img src="img/logo.svg" alt="logo">
+            <p>BOOKSHELF APPS</p>
+        </div>
+        <div id="navSearch">
+            <input class="search" type="search" placeholder="Book title" spellcheck="false">
+            <img src="img/search.svg" alt="search">
+        </div>
+    </nav>
+    <main>
+        <div id="contentHeader">
+            <div id="contentTitle">
+                <div id="titleText">
+                    <h1>BOOKSHELF</h1>
+                    <p>Save and manage your progress reading books</p>
+                </div>
+            </div>
+            <div id="addNewBook">
+                <div id="addNewBookButton">
+                    <img src="img/add.svg" alt="add">
+                    <p>Let's add a new book</p>
+                </div>
+                <div id="formToAdd" hidden>
+                    <h3>Add New Book</h3>
+                    <form id="formAdd">
+                        <div class="formElement">
+                            <label for="title">Title:</label><br>
+                            <input type="text" name="title" id="inputTitleFromAdd" spellcheck="false" required autocomplete="off">
+                        </div>
+                        <div class="formElement">
+                            <label for="author">Author:</label><br>
+                            <input type="text" name="author" id="inputAuthorFromAdd" spellcheck="false" required autocomplete="off">
+                        </div>
+                        <div class="formElement">
+                            <label for="year">Year:</label><br>
+                            <input type="text" name="year" id="inputYearFromAdd" spellcheck="false" required autocomplete="off">
+                        </div>
+                        <div class="formElement">
+                            <input type="checkbox" id="mark" onclick="setCheck(1)">
+                            <p>Mark as read</p>
+                        </div>
+                        <div class="formElement">
+                            <input type="submit" value="ADD" id="addButton">
+                        </div>
+                    </form>
+                    <img class="close" src="img/close.svg" alt="close" id="closeOfAdd">
+                </div>
+            </div>
+        </div>
+        <div id="contentSearch">
+            <input class="search" type="search" placeholder="Book title" spellcheck="false">
+            <img src="img/search.svg" alt="search">
+        </div>
+        <div id="shelf">
+            <div class="bookshelf">
+                <div class="shelfName">
+                    <p>Not Finished Reading</p>
+                </div>
+                <div id="notFinishedReading" class="bookList">
+                </div>
+            </div>
+
+            <div class="bookshelf">
+                <div class="shelfName">
+                    <p>Finished Reading</p>
+                </div>
+                <div id="finishedReading" class="bookList">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2022 Dody Setiawan</p>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
